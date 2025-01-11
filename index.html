@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdad o Reto</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Verdad o Reto</h1>
+
+    <!-- Imagen o GIF de diablito (puede ir en cualquier lugar dentro del body) -->
+    <div id="devilGif" class="devil-gif">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904a8656-d025-458b-ab94-7335122cc9b9/dasqgk7-2e84b571-dc56-4e3d-8b31-ef8bac5f6b10.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkwNGE4NjU2LWQwMjUtNDU4Yi1hYjk0LTczMzUxMjJjYzliOVwvZGFzcWdrNy0yZTg0YjU3MS1kYzU2LTRlM2QtOGIzMS1lZjhiYWM1ZjZiMTAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VNHaI7eHCe1-eb9dS74hHO6yn4KQN13dszIyvhH_rK0" alt="Diablito" />
+    </div>
+
+    <!-- Formulario para ingresar nombres -->
+    <div id="nameForm" class="name-form">
+      <label for="player1">Jugador 1: <img src="https://i.ibb.co/dbZQ979/image-removebg-preview-5.png" class="omar" />
+      </label>
+      <input type="text" id="player1" placeholder="Nombre Jugador 1" required>
+      <label for="player2">Jugador 2: <img src="https://i.ibb.co/RYCz7BD/image-removebg-preview-3.png" class="liz" /></label>
+      <input type="text" id="player2" placeholder="Nombre Jugador 2" required>
+      <button onclick="startGame()" class="btn-primary">Iniciar Juego</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="gameScreen" class="game-screen">
+      <h2 id="currentPlayer">
+        <span id="playerIcon"></span> <span id="playerName"></span>, es tu turno.
+      </h2>
+      <div class="btn-container">
+        <button id="truthButton" onclick="playTurn('truth')" class="btn-action">Verdad</button> 
+        <button id="dareButton" onclick="playTurn('dare')" class="btn-action">Reto</button>
+      </div>
+      
+      <div id="timer">Tiempo: <span id="timeLeft">60</span> segundos</div>
+      <div id="questionArea">
+        <p id="questionText">¡Bienvenidos al juego!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
